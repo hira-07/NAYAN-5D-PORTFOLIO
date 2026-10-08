@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hira-07.github.io/hira-7/sitemap.xml
