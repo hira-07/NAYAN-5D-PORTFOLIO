@@ -2430,3 +2430,121 @@ footer a {
     }
 }
 
+/* ===== NAYAN 5D CONTACT SECTION ===== */
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.contact-method {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+    padding: 22px;
+    overflow: hidden;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    background: rgba(8, 18, 35, 0.75);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.contact-method::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(0, 229, 255, 0.08),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+
+.contact-method:hover::before {
+    transform: translateX(100%);
+}
+
+.contact-method:hover {
+    transform: translateY(-5px);
+    border-color: #00e5ff;
+    background: rgba(0, 229, 255, 0.07);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.12);
+}
+
+.contact-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    font-size: 23px;
+    background: rgba(0, 229, 255, 0.08);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 12px;
+}
+
+.contact-method > div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.contact-method small {
+    color: #00e5ff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-method strong {
+    overflow-wrap: anywhere;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact-arrow {
+    margin-left: auto;
+    color: #00e5ff;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.contact-method:hover .contact-arrow {
+    transform: translate(3px, -3px);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .contact-method {
+        padding: 17px;
+    }
+
+    .contact-method strong {
+        font-size: 13px;
+    }
+}
