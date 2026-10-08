@@ -2241,3 +2241,192 @@ footer a {
         letter-spacing: 2px;
     }
 }
+
+/* =========================================
+   LIVE PROJECTS — NAYAN 5D
+========================================= */
+
+.projects-subtitle {
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.8;
+}
+
+.project-live-link {
+    display: block;
+    color: inherit;
+    overflow: hidden;
+}
+
+.project-art {
+    position: relative;
+    min-height: 260px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 14px;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid rgba(0, 240, 255, 0.16);
+}
+
+.project-art::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(
+            circle at 75% 25%,
+            rgba(0, 240, 255, 0.2),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #101a2c,
+            #080912 70%
+        );
+}
+
+.art-two::before {
+    background:
+        radial-gradient(
+            circle at 75% 25%,
+            rgba(139, 92, 255, 0.25),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #21132b,
+            #080912 70%
+        );
+}
+
+.project-art > span,
+.project-art > b,
+.project-art > small,
+.project-symbol {
+    position: relative;
+    z-index: 1;
+}
+
+.project-art > span {
+    color: #00f0ff;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.project-art > b {
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(18px, 2.5vw, 27px);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.project-art > small {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.project-symbol {
+    font-size: 64px;
+    line-height: 1;
+    color: #00f0ff;
+    text-shadow: 0 0 30px rgba(0, 240, 255, 0.55);
+}
+
+.asomi-symbol {
+    font-family: "Orbitron", sans-serif;
+    font-size: 54px;
+    font-weight: 900;
+    color: #c4a4ff;
+    text-shadow: 0 0 30px rgba(139, 92, 255, 0.55);
+}
+
+.project-info {
+    padding-top: 22px;
+}
+
+.project-info > p:first-child {
+    color: #00f0ff;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.project-info h3 {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.project-description {
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.project-tags span {
+    padding: 7px 10px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #a7f7ff;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    background: rgba(0, 240, 255, 0.04);
+}
+
+.project-visit {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    color: #00f0ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition:
+        gap 0.25s ease,
+        color 0.25s ease;
+}
+
+.project-visit:hover {
+    gap: 19px;
+    color: #ffffff;
+}
+
+.project-live-link:hover .project-art {
+    border-color: rgba(0, 240, 255, 0.5);
+}
+
+.project-live-link:hover .project-symbol {
+    transform: translateY(-4px) scale(1.05);
+}
+
+.project-symbol {
+    transition: transform 0.35s ease;
+}
+
+@media (max-width: 600px) {
+    .project-art {
+        min-height: 220px;
+        padding: 22px;
+    }
+
+    .project-art > b {
+        font-size: 20px;
+    }
+
+    .project-description {
+        font-size: 13px;
+    }
+}
+
